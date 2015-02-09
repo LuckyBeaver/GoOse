@@ -57,6 +57,7 @@ func (this Crawler) Crawl() *Article {
 		cleaner := NewCleaner(this.config)
 		article.Doc = cleaner.clean(article)
 
+
 		article.TopNode = extractor.calculateBestNode(article)
 		if article.TopNode != nil {
 			article.TopNode = extractor.postCleanup(article.TopNode)
@@ -77,6 +78,7 @@ func (this Crawler) Crawl() *Article {
 		delta := stop - start
 		article.Delta = delta
 
+		article.Doc = document
 	} else {
 		panic(err.Error())
 	}
