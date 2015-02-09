@@ -54,7 +54,7 @@ func (this Crawler) Crawl() *Article {
 		article.Domain = extractor.getDomain(article)
 		article.Tags = extractor.getTags(article)
 
-		cleaner := NewCleaner(this.config)
+//		cleaner := NewCleaner(this.config)
 //		article.Doc = cleaner.clean(article)
 
 
