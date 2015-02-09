@@ -49,6 +49,8 @@ func (this *contentExtractor) getTitle(article *Article) string {
 	}
 
 	titleText := titleElement.Text()
+	return titleText
+
 	usedDelimiter := false
 
 	if strings.Contains(titleText, "|") {
